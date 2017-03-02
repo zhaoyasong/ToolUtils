@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 14
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.+'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/sun.misc.BASE64Decoder.jar')
+    compile files('libs/zxing.jar')
+    compile files('libs/android-async-http-1.4.8.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+}
